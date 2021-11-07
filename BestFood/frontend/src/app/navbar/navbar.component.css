@@ -1,14 +1,28 @@
-.bg-nav{
+.bg-nav {
     background-color: #F97909;
-
-    
 }
-#white{
+
+#white {
     color: white;
 }
 
-.logoIcon{
+.logoIcon {
     width: 50px;
     height: auto;
+}
 
+#nav1 {
+    margin-left: 800px;
+}
+
+@media screen and (max-width: 1318px) {
+    #nav1 {
+        margin-left: 500px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #nav1 {
+        margin-left: 0px;
+    }
 }
