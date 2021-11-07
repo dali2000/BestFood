@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistreComponent } from './client/registre/registre.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { MenuComponent } from './Menu/menu/menu.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     NavbarComponent,
     RegistreComponent,
     RestaurantComponent,
+    MenuComponent,
     
   ],
   imports: [
