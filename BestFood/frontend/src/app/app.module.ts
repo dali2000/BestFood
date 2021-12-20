@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,7 +14,6 @@ import { RestaurentComponent } from './restaurent/restaurent.component';
 import { ProfilComponent } from './client/profil/profil.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +26,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HomeComponent,
     RestaurentComponent,
     ProfilComponent,
-    SidebarComponent,
+    SidebarComponent
     
   ],
   imports: [
