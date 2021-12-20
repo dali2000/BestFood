@@ -15,6 +15,8 @@ import { DietFoodsComponent } from './diet-foods/diet-foods.component';
 import { DesertFoodsComponent } from './desert-foods/desert-foods.component';
 import { ProfilComponent } from './client/profil/profil.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DietFoodsComponent,
     DesertFoodsComponent,
     ProfilComponent,
-    SidebarComponent
+    SidebarComponent,
+    ContactComponent
     
   ],
   imports: [
