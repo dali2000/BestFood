@@ -7,11 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RegistreComponent } from './client/registre/registre.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './client/login/login.component';
-import { RestaurantComponent } from './restaurant/restaurant.component';
 import { MenuComponent } from './Menu/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { AllProductesComponent } from './all-productes/all-productes.component';
 import { RestaurentComponent } from './restaurent/restaurent.component';
+import { DietFoodsComponent } from './diet-foods/diet-foods.component';
+import { DesertFoodsComponent } from './desert-foods/desert-foods.component';
 
 
 @NgModule({
@@ -20,11 +22,13 @@ import { RestaurentComponent } from './restaurent/restaurent.component';
     NavbarComponent,
     RegistreComponent,
     LoginComponent,
-    RestaurantComponent,
     MenuComponent,
     FooterComponent,
     HomeComponent,
+    AllProductesComponent,
     RestaurentComponent,
+    DietFoodsComponent,
+    DesertFoodsComponent,
     
   ],
   imports: [
