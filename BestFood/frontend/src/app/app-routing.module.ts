@@ -5,11 +5,13 @@ import{LoginComponent} from'./client/login/login.component';
 import { MenuComponent } from './Menu/menu/menu.component';
 import {RestaurentComponent} from './restaurent/restaurent.component'
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { ProfilComponent } from './client/profil/profil.component';
 
 
 const routes: Routes = [
  {path:'Register',component:RegistreComponent },
  {path:'login',component:LoginComponent},
+ {path:'profil',component:ProfilComponent},
  {path:'Menu',component:MenuComponent},
  {path:'Restaurent',component:RestaurentComponent},
  {path:'Restaurant',component:RestaurantComponent}

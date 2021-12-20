@@ -12,6 +12,8 @@ import { MenuComponent } from './Menu/menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurentComponent } from './restaurent/restaurent.component';
+import { ProfilComponent } from './client/profil/profil.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { RestaurentComponent } from './restaurent/restaurent.component';
     FooterComponent,
     HomeComponent,
     RestaurentComponent,
+    ProfilComponent,
+    SidebarComponent,
     
   ],
   imports: [
