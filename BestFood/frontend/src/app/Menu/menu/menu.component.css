@@ -9,7 +9,9 @@
     
   }
   .cen{
-    margin: 0 auto;
+    
+    display: block;
+    text-align: -webkit-center;
 
 
   }
