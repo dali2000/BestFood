@@ -11,25 +11,21 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  p1="OUR"
+  p2="MENU"
   all = true;
   dis = false;
   die = false;
   click(){
-    this.all =true;
-    this.die=false;
-    this.dis=false;
+this.p2 ="MENU"
     
     
   }
   click1(){
-    this.all =false;
-    this.die=true;
-    this.dis=false;
+this.p2 ="DIETS"
   }
   click2(){
-    this.all =false;
-    this.die=false;
-    this.dis=true;
+    this.p2 ="DESERTS"
   }
 
 }

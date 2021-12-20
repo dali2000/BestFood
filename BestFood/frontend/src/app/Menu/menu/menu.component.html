@@ -2,15 +2,14 @@
 <div class="container">
 <div class="cen">
     <br>
-    <h1 style="text-align:center" *ngIf="all">OUR<span style="color:rgb(255, 94, 0);">MENU</span></h1><br>
-    <h1 style="text-align:center" *ngIf="dis">OUR<span style="color:rgb(255, 94, 0);">Desserts</span></h1><br>
-    <h1 style="text-align:center"*ngIf="die">OUR<span style="color:rgb(255, 94, 0);">DietFood</span></h1><br>
+    <h1 style="text-align:center" *ngIf="all">{{this.p1}}<span style="color:rgb(255, 94, 0);">{{this.p2}}</span></h1><br>
+
     <div class="row " >
         <div class="col"><a routerLink="/Menu/allProductes"><button class="btn sign" (click)="click()">All Products</button></a></div>
         <div class="col"><a routerLink="/Menu/DietFoods"><button class="btn sign" (click)="click1()">Diet foods</button></a></div>
         <div class="col"><a routerLink="/Menu/DesertFoods"><button class="btn sign" (click)="click2()">Our Desert</button></a></div>
     </div>
-    <br>
+    <br>  
     <router-outlet></router-outlet>
 </div>
-</div>
+</div>    
