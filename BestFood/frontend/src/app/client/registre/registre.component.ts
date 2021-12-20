@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgModule  } from '@angular/core';
 @Component({
   selector: 'app-registre',
   templateUrl: './registre.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistreComponent implements OnInit {
 
-  constructor() { }
+
+  
+
+  constructor() {
+   }
 
   ngOnInit(): void {
+
+
   }
+
+
 
 }
