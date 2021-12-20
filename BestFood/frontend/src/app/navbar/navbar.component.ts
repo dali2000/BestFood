@@ -13,5 +13,6 @@ export class NavbarComponent implements OnInit {
 
   }
   imgPath = "../img/logo.png";
+  url="/Register";
 
 }
