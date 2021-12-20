@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,6 +15,7 @@ import { DietFoodsComponent } from './diet-foods/diet-foods.component';
 import { DesertFoodsComponent } from './desert-foods/desert-foods.component';
 import { ProfilComponent } from './client/profil/profil.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -33,6 +33,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DesertFoodsComponent,
     ProfilComponent,
     SidebarComponent,
+    ContactComponent
     
   ],
   imports: [
