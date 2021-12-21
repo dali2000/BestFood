@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AppServiceService } from 'src/app/service/app-service.service';
 
+import jwtDecode from 'jwt-decode';
+import { DataServiceService } from 'src/app/service/data-service.service';
 
 
 
@@ -12,21 +13,36 @@ import { AppServiceService } from 'src/app/service/app-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private auth:AppServiceService,private http:HttpClient) {}
-
- 
+  constructor(service:DataServiceService ,private http:HttpClient) {}
+  data:any;
+  token:any;
+  user:any;
 
   ngOnInit(): void {
    
   }
+  public form = {
+    email:null,
+    password:null
+  }
   
-  authU(f:any){
-    let data=f.value
-    this.http.get("http://localhost:3000/test").subscribe(response=>console.log(response),err=>console.log(err))
-    
-    
+  // authU(f:any){
+  //   let data=f.value
+  //   this.http.get("http://localhost:3000/test").subscribe(response=>console.log(response),err=>console.log(err))
 
 
+  // }
+  login(form:any){
+    this.http.post("http://localhost:3000/user/login/",form).subscribe(res=>{
+      this.data = res;
+      this.token = this.data.token;
+      
+        localStorage.setItem('token',this.token);
+        this.token = localStorage.getItem('token');
+        this.user = jwtDecode(this.token);
+        console.log(this.user);
+    }
+  );
   }
   
 }

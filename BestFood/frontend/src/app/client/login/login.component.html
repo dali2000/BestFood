@@ -10,16 +10,16 @@
 
             <h2 class="title">Welcome</h2>
 
-            <form #f="ngForm" (ngSubmit)="authU(f)">
+            <form #f="ngForm" >
 
 
                 <div class="div">
                     <div class="form-floating mb-3">
-                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" ngModel>
+                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email">
                         <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" ngModel>
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password" >
                         <label for="floatingPassword">Password </label>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
 
                 <a routerLink="/Register">Creat account?</a><br>
 
-                <button type="submit" class="btn btn-primary    ">Login</button> <br> <br>
+                <button type="submit" class="btn btn-primary" (click)="login(form)">Login</button> <br> <br>
 
             </form>
         </div>
