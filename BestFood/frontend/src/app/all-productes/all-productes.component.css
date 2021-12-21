@@ -33,3 +33,18 @@
     color: white;
     border: 2px solid rgb(255, 94, 0);
   }
+  .menu{
+    margin: auto;
+    
+  }
+  .center{
+    margin: auto;
+    width: 100%;
+   
+    padding-left:auto;
+    padding-right: auto;
+    display: block;
+    text-align: -webkit-center;
+    
+  
+  }
