@@ -22,7 +22,6 @@ import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
