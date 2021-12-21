@@ -16,6 +16,11 @@ import { DesertFoodsComponent } from './desert-foods/desert-foods.component';
 import { ProfilComponent } from './client/profil/profil.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateProfilComponent } from './client/update-profil/update-profil.component';
+import { HistoriqueComponent } from './client/historique/historique.component';
+import { BasketComponent } from './basket/basket.component';
+
 
 
 @NgModule({
@@ -33,13 +38,17 @@ import { ContactComponent } from './contact/contact.component';
     DesertFoodsComponent,
     ProfilComponent,
     SidebarComponent,
-    ContactComponent
+    ContactComponent,
+    UpdateProfilComponent,
+    HistoriqueComponent,
+    BasketComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
