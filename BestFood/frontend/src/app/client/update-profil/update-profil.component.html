@@ -2,34 +2,36 @@
 <div class="container">
 
     <div class="bloc">
-        <p>last na<span style="color: rgb(247, 97, 10);">me:</span> </p>
-        <div class="form-group">
-            <input type="text" name="nom" id="name" class="form-control" placeholder="last name" value="">
-        </div>
-        <p>first na<span style="color: rgb(247, 97, 10);">me:</span></p>
-        <div class="form-group">
-            <input type="text" name="nom" id="name" class="form-control" placeholder="first name" value="">
-        </div>
-        <p>number pho<span style="color: rgb(247, 97, 10);">ne:</span></p>
-        <div class="form-group">
-            <input type="text" name="nom" id="name" class="form-control" placeholder="number phone" value="">
-        </div>
-        <p>Ema<span style="color: rgb(247, 97, 10);">il:</span> </p>
-        <div class="form-group">
-            <input type="email" name="nom" id="name" class="form-control" placeholder="Email" value="">
-        </div>
-        <p>Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
-        <div class="form-group">
-            <input type="password" name="password" id="name" class="form-control" placeholder="password" value="">
-        </div>
-        <p>New Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
-        <div class="form-group">
-            <input type="password" name="password" id="name" class="form-control" placeholder="New password" value="">
-        </div>
-        <div>
-            <input type="submit" value="UPDATE" class="btn btn-buy4">
-        </div>
+        <form #f="ngForm">
 
+            <p>last na<span style="color: rgb(247, 97, 10);">me:</span> </p>
+            <div class="form-group">
+                <input type="text" name="lastName" id="name" class="form-control" placeholder="last Name" [(ngModel)]="form.lastName">
+            </div>
+            <p>first na<span style="color: rgb(247, 97, 10);">me:</span></p>
+            <div class="form-group">
+                <input type="text" name="firsName" id="name" class="form-control" placeholder="first Name" value="{{" [(ngModel)]="form.firstName">
+            </div>
+            <p>number pho<span style="color: rgb(247, 97, 10);">ne:</span></p>
+            <div class="form-group">
+                <input type="text" name="phone" id="name" class="form-control" placeholder="number phone" value="" [(ngModel)]="form.phone">
+            </div>
+            <p>Ema<span style="color: rgb(247, 97, 10);">il:</span> </p>
+            <div class="form-group">
+                <input type="email" name="email" id="name" class="form-control" placeholder="Email" value="" [(ngModel)]="form.email">
+            </div>
+            <p>Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
+            <div class="form-group">
+                <input type="password" name="cpassword" id="name" class="form-control" placeholder="password" value="">
+            </div>
+            <p>New Passwo<span style="color: rgb(247, 97, 10);">rd:</span> </p>
+            <div class="form-group">
+                <input type="password" name="password" id="name" class="form-control" placeholder="New password" value="" [(ngModel)]="form.password">
+            </div>
+            <div>
+                <input type="submit" value="UPDATE" class="btn btn-buy4" (click)="update(form)">
+            </div>
+        </form>
         <router-outlet></router-outlet>
 
     </div>

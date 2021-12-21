@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import jwtDecode from 'jwt-decode';
+import { Observable } from 'rxjs';
 import { DataServiceService } from 'src/app/service/data-service.service';
 
 
@@ -36,8 +37,9 @@ export class LoginComponent implements OnInit {
     this.http.post("http://localhost:3000/user/login/",form).subscribe(res=>{
       this.data = res;
       this.token = this.data.token;
-      
-        localStorage.setItem('token',this.token);
+     const headers =new Headers();
+     headers.append('Authorization', `jwt ${this.token}`);
+     localStorage.setItem('token',this.token);
         this.token = localStorage.getItem('token');
         this.user = jwtDecode(this.token);
         console.log(this.user);
