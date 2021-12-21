@@ -4,11 +4,7 @@
     width: 60vw;
     padding: 2vw;
     border-radius: 5px;
-    margin-left: auto;
+    margin-left: 20%;
     margin-right: auto;
     margin-top: 2%;
-}
-
-p {
-    font-size: large;
 }

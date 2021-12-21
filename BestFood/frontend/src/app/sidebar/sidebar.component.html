@@ -12,44 +12,55 @@
                 <i class='bx bx-user' style="color: rgb(0, 0, 0);"></i>
                 <span class="links_name">Profil</span>
             </a>
-            <span class="tool">Dashbored</span>
+            <span class="tool">Profil</span>
         </li>
-        <li *ngIf="!test">
+        <!-- <li>
             <a routerLink="/dashbored">
                 <i class='bx bx-grid-alt' style="color: rgb(0, 0, 0);"></i>
                 <span class="links_name">Dashbored</span>
             </a>
             <span class="tool">Dashbored</span>
-        </li>
+        </li> -->
 
 
         <li>
-            <a routerLink="/servers">
+            <a routerLink="/updateprofil">
                 <i class='bx bx-server' style="color: rgb(0, 0, 0);"></i>
-                <span class="links_name">Servers</span>
+                <span class="links_name">Update profil</span>
             </a>
-            <span class="tool">Servers</span>
+            <span class="tool">update</span>
+        </li>
+
+
+        <li>
+            <a routerLink="/Menu/allProductes">
+                <i class='bx bx-food-menu' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Menu</span>
+            </a>
+            <span class="tool">Menu</span>
         </li>
         <li>
-            <a routerLink="/addServer/ec2">
-                <i class='bx bxs-add-to-queue' style="color: rgb(0, 0, 0);"></i>
-                <span class="links_name">Add Server</span>
+            <a routerLink="/Restaurent">
+                <i class='bx bx-restaurant' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Restaurent</span>
             </a>
-            <span class="tool">Add Server</span>
+            <span class="tool">Restaurent</span>
         </li>
         <li>
-            <a routerLink="/User">
-                <i class='bx bx-user-pin' style="color: rgb(0, 0, 0);"></i>
-                <span class="links_name">Users</span>
+            <a routerLink="/contact">
+                <i class="fa fa-envelope" style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Contact</span>
             </a>
-            <span class="tool">Users</span>
+            <span class="tool">Contact</span>
         </li>
+
         <li>
-            <a routerLink="/Inscri">
-                <i class='bx bx-user-plus' style="color: rgb(0, 0, 0);"></i>
-                <span class="links_name">Add User</span>
+            <a routerLink="/historique">
+
+                <i class='bx bx-history' style="color: rgb(0, 0, 0);"></i>
+                <span class="links_name">Historique</span>
             </a>
-            <span class="tool">Add User</span>
+            <span class="tool">Historique</span>
         </li>
     </ul>
     <div class="profile_content">
@@ -63,4 +74,8 @@
             <a><i class='bx bxs-log-out' id="log_out" ></i></a>
         </div>
     </div>
+</div>
+<div>
+
+    <router-outlet></router-outlet>
 </div>
