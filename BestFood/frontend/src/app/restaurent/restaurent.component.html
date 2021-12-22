@@ -1,1 +1,28 @@
-<p>restaurent works!</p>
+<div class="container">
+    <div class="cen">
+        <br>
+        <h1 style="text-align:center">{{this.p1}}<span style="color:rgb(255, 94, 0);">{{this.p2}}</span></h1><br>
+
+        <div class="row">
+            <div class="col-sm-6 rest" *ngFor="let resto of restos">
+                <div class="row">
+                    <div class="col-sm-3" >
+                        <img [src]="resto.logo" alt="" srcset="" class="img">
+                    </div>
+                    <div class="col-sm-3">
+                        <h6>{{resto.name}}Restaurent</h6><br>
+                        <h6> {{resto.position}} </h6>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-buy2"><i class='bx bx-food-menu '></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>
