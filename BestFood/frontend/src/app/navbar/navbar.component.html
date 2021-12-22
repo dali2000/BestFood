@@ -22,13 +22,16 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i>
+
+                    <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i> <span style="color: white;">{{user.firstName}} {{user.lastName}}</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" routerLink="/profil">Profil</a></li>
                     <li><a class="dropdown-item" routerLink="/basket">Basket</a></li>
 
                     <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+
+
                 </ul>
             </li>
         </ul>
@@ -44,7 +47,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link scroll nav2" href="#" id="navc"><i class="fa fa-phone" id="navc"></i>
-                    +21655454881</a>
+                    +216 {{user.phone}}</a>
             </li>
 
             <li>
