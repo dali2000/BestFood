@@ -10,7 +10,7 @@
 
             <h2 class="title">Welcome</h2>
 
-            <form #f="ngForm" >
+            <form #f="ngForm">
 
 
                 <div class="div">
@@ -19,7 +19,7 @@
                         <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password" >
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password">
                         <label for="floatingPassword">Password </label>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
 
                 <a routerLink="/Register">Creat account?</a><br>
 
-                <button type="submit" class="btn btn-primary" (click)="login(form)">Login</button> <br> <br>
+                <a routerLink="/Menu/allProductes"> <button type="submit" class="btn btn-primary" (click)="login(form)">Login</button></a> <br> <br>
 
             </form>
         </div>

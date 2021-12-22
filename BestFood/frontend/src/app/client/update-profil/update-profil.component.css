@@ -9,6 +9,11 @@
     margin-top: 2%;
 }
 
+h1 {
+    display: block;
+    text-align: -webkit-center;
+}
+
 .form-group {
     margin-top: -2%;
 }

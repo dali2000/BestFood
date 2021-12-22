@@ -2,15 +2,16 @@
 <div class="container">
 
     <div class="bloc">
+        <h1><span style="color: rgb(247, 97, 10);">U</span>pdate <span style="color: rgb(247, 97, 10);">P</span>rofil</h1>
         <form #f="ngForm">
 
             <p>last na<span style="color: rgb(247, 97, 10);">me:</span> </p>
             <div class="form-group">
-                <input type="text" name="lastName" id="name" class="form-control" placeholder="last Name" [(ngModel)]="form.lastName">
+                <input type="text" name="lastName" id="name" class="form-control" placeholder="last Name" [(ngModel)]="form.lastName" ngModel>
             </div>
             <p>first na<span style="color: rgb(247, 97, 10);">me:</span></p>
             <div class="form-group">
-                <input type="text" name="firsName" id="name" class="form-control" placeholder="first Name" value="{{" [(ngModel)]="form.firstName">
+                <input type="text" name="firsName" id="name" class="form-control" placeholder="first Name" value="" [(ngModel)]="form.firstName">
             </div>
             <p>number pho<span style="color: rgb(247, 97, 10);">ne:</span></p>
             <div class="form-group">
