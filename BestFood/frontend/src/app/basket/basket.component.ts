@@ -39,8 +39,9 @@ export class BasketComponent implements OnInit {
         this.total+=parseInt(this.carts[i].order.price)
         
       }
-      console.log(this.total)
+
     })
+
   }
 
 }

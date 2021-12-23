@@ -1,5 +1,4 @@
-<img src="/assets/img/back.jpg" alt="">
-
+<app-navbar></app-navbar>
 <div class="container">
     <br>
     <h1 style="text-align:center">MY <span style="color:rgb(255, 94, 0);">BASKET</span></h1><br>
@@ -11,6 +10,7 @@
                 <tr>
                     <th scope="col">Product</th>
                     <th scope="col">Name</th>
+                    <th scope="col">quantity</th>
                     <th scope="col">Price</th>
                     <th scope="col">Edit</th>
 
@@ -20,6 +20,7 @@
                 <tr *ngFor="let cart of carts; index as i;">
                     <td><img [src]="carts[i].order.img" alt="" class="img"></td>
                     <td><p>{{carts[i].order.name}}</p></td>
+                    <td><p>{{carts[i].quantity}}</p></td>
                     <td><p>{{carts[i].order.price}} TND</p></td>
                     <td>
                         <button class="btn btn-danger"><i class='bx bx-trash'></i></button>
@@ -34,6 +35,6 @@
     </div>
 
     <span style="float:right; margin-right:10px">
-      <a href=""><button class="btn btn-success"><i class="fa fa-check" style="color:white;"></i>Confirm</button></a>
+      <a ><button class="btn btn-success"><i class="fa fa-check" style="color:white;"></i>Confirm</button></a>
     </span>
 </div>
