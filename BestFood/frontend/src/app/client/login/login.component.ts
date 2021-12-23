@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import jwtDecode from 'jwt-decode';
 import { Observable } from 'rxjs';
 import { DataServiceService } from 'src/app/service/data-service.service';
@@ -14,7 +14,7 @@ import { DataServiceService } from 'src/app/service/data-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(service:DataServiceService ,private http:HttpClient) {}
+  constructor(service:DataServiceService ,private http:HttpClient, private router:Router) {}
   data:any;
   token:any;
   user:any;
@@ -42,9 +42,24 @@ export class LoginComponent implements OnInit {
      localStorage.setItem('token',this.token);
         this.token = localStorage.getItem('token');
         this.user = jwtDecode(this.token);
-        console.log(this.user);
+        //console.log(this.user);
+
+        //redirect after login
+        if(this.token !=null){
+           this.router.navigate((['/profil']))
+         }
+         else{
+          this.router.navigate((['/login']))
+
+         }
     }
   );
+
+  //console.log(this.token)
+
+ 
+  
   }
+
   
 }

@@ -17,6 +17,7 @@ import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.compo
 
 
 const routes: Routes = [
+
  {path:'Register',component:RegistreComponent },
  {path:'login',component:LoginComponent},
  {path:'contact',component:ContactComponent},
