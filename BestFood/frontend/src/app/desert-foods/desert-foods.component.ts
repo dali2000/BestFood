@@ -11,8 +11,9 @@ import { filter } from 'rxjs/operators';
 export class DesertFoodsComponent implements OnInit {
 
   constructor(private router:Router,private http:HttpClient) { }
-
+  token:any;
   ngOnInit(): void {
+    this.token = localStorage.getItem('token')
     this.getAllFood()
   }
   data :any;
@@ -41,11 +42,23 @@ export class DesertFoodsComponent implements OnInit {
       this.n = 0;
     }
   }
-  buy() {
-
-    this.fd.qte = this.n;
-    // this.fd._id = this.food._id;
-    console.log(this.fd._id)
+  fod={
+    _id:null,
+    token:"",
+    quantity:""
+  }
+    buy(id:any){
+    
+    this.fod._id = id;
+    this.fod.token = this.token;
+    this.fod.quantity = this.n.toString();
+    
+ 
+     this.n = 0
+     console.log(this.fod)
+    this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
+      console.log(res)
+    })
   }
 
 }

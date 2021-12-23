@@ -1,4 +1,5 @@
-<div class="center">
+<div class="row center">
+
     <div class='row'>
         <br>
         <!-- ---------- -->
@@ -10,63 +11,30 @@
                     style="width:'150px';height:'auto';margin:auto;margin-top: 10px;">
                 <div class='card-body 1-light text-dark b' style='text-align:center;font-weight:bold'>
                     <h4 class='card-title' style='color:black;text-align:center'>{{food.name}}</h4>
-                    <p class='card-text' style='color:rgb(43, 184, 62);'>{{food.price}}$</p>
+                    <p class='card-text' style='color:rgb(43, 184, 62);'>{{food.price}} TND</p>
                     <p class="card-text" style='color:rgb(43, 184, 62);'>Available</p>
                 </div>
                 <div class='card-body '>
-                    
-                    <button type="button" class="btn btn btn-buy" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal" style="margin-top:10px">
+                    <div class="row center">
+                        <button class="btn btn-s" (click)="mins()"><i class='bx bx-minus-circle'></i></button>
+                        <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
+                        <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="n" >
+                        
+                        <button class="btn btn-s" (click)="plus()"><i class='bx bx-plus-circle'></i></button>
+                        
+                    </div>
+                    <button type="button" class="btn btn btn-buy" 
+                       style="margin-top:10px" (click)="buy(food._id)">
                         <i class='bx bxs-cart-add'></i>BUY NOW
                     </button>
                 </div>
             </div>
 
             <br>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">{{food.name}}</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                               <div class="col-md-4" style="background-color: rgb(223, 223, 223); border-radius:15px ">
-                                <img [src]="food.img" alt="" class="img">
-                               </div>
-                               <div class="col-md-8" >
-                                   <h6>Description</h6>
-                                   <p>1 The Original Wrapper Raclette et Bacon (voir détails à la carte)+ 1 accompagnement + 1 boisson</p>
-                               </div>
-                            </div>
 
-                        </div>
-                        <div class="modal-footer">
-                            <div class="row">
-                                <button class="btn btn-s" (click)="mins()"><i class='bx bx-minus-circle'></i></button>
-                                <input type="text" name="" id="" [(ngModel)]="food._id" hidden>
-                                <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="n" >
-                                <button class="btn btn-s" (click)="plus()"><i class='bx bx-plus-circle'></i></button>
-                                
-                            </div>
-                            <button type="button" class="btn btn-buy4" (click)="buy()">BUY NOW<i
-                                class='bx bx-plus-circle'></i></button>
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal" style="width:100%">Close</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <br>
 
     </div>
-
-
-
 
 </div>

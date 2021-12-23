@@ -17,9 +17,20 @@
                 </tr>
             </thead>
             <tbody>
+                <tr *ngFor="let cart of carts; index as i;">
+                    <td><img [src]="carts[i].order.img" alt="" class="img"></td>
+                    <td><p>{{carts[i].order.name}}</p></td>
+                    <td><p>{{carts[i].order.price}} TND</p></td>
+                    <td>
+                        <button class="btn btn-danger"><i class='bx bx-trash'></i></button>
+                    </td>
 
+
+                </tr>
+                
             </tbody>
         </table>
+        <h4>Total:{{total}} TND</h4>
     </div>
 
     <span style="float:right; margin-right:10px">
