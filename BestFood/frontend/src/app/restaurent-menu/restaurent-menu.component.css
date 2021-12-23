@@ -1,4 +1,29 @@
-.card-body1 {
+.logo{
+    width:120px;
+    height:auto;
+    border-radius: 50%;
+    border:3px solid rgb(255, 255, 255);
+    
+    box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+}
+.cen {
+    display: block;
+    text-align: -webkit-center;
+  }
+  .cover{
+    border-radius: 15px;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px;
+    box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
+  }
+  .card-body1 {
     color: black;
     background-color: white;  
 

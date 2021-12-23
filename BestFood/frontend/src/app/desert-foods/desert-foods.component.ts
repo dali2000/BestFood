@@ -26,7 +26,27 @@ export class DesertFoodsComponent implements OnInit {
     });
 
   }
-  f = [];
+   n = 0;
+  fd = {
+    _id: "",
+    qte: 0
+  }
+
+  plus() {
+    this.n++;
+  }
+  mins() {
+    this.n--;
+    if (this.n < 0) {
+      this.n = 0;
+    }
+  }
+  buy() {
+
+    this.fd.qte = this.n;
+    // this.fd._id = this.food._id;
+    console.log(this.fd._id)
+  }
 
 }
 
