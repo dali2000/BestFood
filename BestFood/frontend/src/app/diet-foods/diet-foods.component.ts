@@ -10,22 +10,23 @@ import { Router } from '@angular/router';
 export class DietFoodsComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
-
+  token:any;
   ngOnInit(): void {
+    this.token = localStorage.getItem('token')
     this.getAllFood()
   }
-  data: any;
-  foods: any;
-  getAllFood() {
-    this.http.get("http://localhost:3000/food/foods").subscribe(res => {
-
+  data :any;
+  foods:any;
+  getAllFood(){
+    this.http.get("http://localhost:3000/food/foods").subscribe(res =>{
+      
       this.data = res;
-      this.foods = this.data.food;
-
+     this.foods =this.data.food;
+    
     });
 
   }
-  n = 0;
+   n = 0;
   fd = {
     _id: "",
     qte: 0
@@ -40,11 +41,23 @@ export class DietFoodsComponent implements OnInit {
       this.n = 0;
     }
   }
-  buy() {
-
-    this.fd.qte = this.n;
-    // this.fd._id = this.food._id;
-    console.log(this.fd._id)
+  fod={
+    _id:null,
+    token:"",
+    quantity:""
+  }
+    buy(id:any){
+    
+    this.fod._id = id;
+    this.fod.token = this.token;
+    this.fod.quantity = this.n.toString();
+    
+ 
+     this.n = 0
+     console.log(this.fod)
+    this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
+      console.log(res)
+    })
   }
 }
 

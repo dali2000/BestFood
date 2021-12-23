@@ -6,7 +6,11 @@
 
 img {
     margin-left: -12px;
-    width: 101.7%;
+    width: 12px;
+}
+.img{
+    margin:10px;
+    width: 80px;
 }
 
 .nav {
