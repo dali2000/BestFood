@@ -16,6 +16,12 @@ export class AllProductesComponent implements OnInit {
   }
   data :any;
   foods:any;
+  n=0
+
+  fd = {
+    _id:"",
+    qte:0
+  }
   getAllFood(){
     this.http.get("http://localhost:3000/food/foods").subscribe(res =>{
       
@@ -23,5 +29,21 @@ export class AllProductesComponent implements OnInit {
      this.foods =this.data.food;
      console.log(this.foods);
     })
+  }
+
+  plus(){
+    this.n ++;
+  }
+  mins(){
+    this.n --;
+    if(this.n<0){
+      this.n=0;
+    }
+  }
+  buy(){
+    
+    this.fd.qte = this.n;
+    // this.fd._id = this.food._id;
+    console.log(this.fd._id )
   }
 }

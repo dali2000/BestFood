@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { UpdateProfilComponent } from './client/update-profil/update-profil.component';
 import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
+import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
+
+
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { BasketComponent } from './basket/basket.component';
     ContactComponent,
     UpdateProfilComponent,
     HistoriqueComponent,
-    BasketComponent
+    BasketComponent,
+    RestaurentMenuComponent,
+   
+  
     
   ],
   imports: [

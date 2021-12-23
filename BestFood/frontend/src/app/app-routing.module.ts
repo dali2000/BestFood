@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { UpdateProfilComponent } from './client/update-profil/update-profil.component';
 import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
+import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
 
 
 
@@ -36,7 +37,8 @@ const routes: Routes = [
  {path:'Restaurent',component:RestaurentComponent},
  {path:'Menu',component:MenuComponent},
  {path:'Restaurent',component:RestaurentComponent},
- {path:'Restaurant',component:RestaurentComponent}
+ {path:'Restaurant',component:RestaurentComponent},
+ {path:'RestaurantMenu/:email',component:RestaurentMenuComponent}
 
 
 
