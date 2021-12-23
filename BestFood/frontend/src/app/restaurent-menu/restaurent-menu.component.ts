@@ -14,9 +14,11 @@ export class RestaurentMenuComponent implements OnInit {
   restos: any;
   food: any
   nb = 0;
+  token:any;
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.token = localStorage.getItem('token')
 
     this.route.paramMap.subscribe(params => {
       const RestaurantEmail = params.get("email");
@@ -44,11 +46,11 @@ export class RestaurentMenuComponent implements OnInit {
   }
 
   n = 0;
-  fd = {
-    _id: "",
-    qte: 0
-  }
+  
+ 
+   
 
+  
   plus() {
     this.n++;
   }
@@ -58,10 +60,31 @@ export class RestaurentMenuComponent implements OnInit {
       this.n = 0;
     }
   }
+
+fod={
+  _id:null,
+  token:"",
+  quantity:""
+}
+
+
+
+
+
+ 
+ 
   buy(id:any){
-    this.fd.qte = this.n;
-     this.fd._id = id;
-    console.log(this.fd)
+    
+    this.fod._id = id;
+    this.fod.token = this.token;
+    this.fod.quantity = this.n.toString();
+    
+ 
+     this.n = 0
+     console.log(this.fod)
+    this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
+      console.log(res)
+    })
   }
 
 

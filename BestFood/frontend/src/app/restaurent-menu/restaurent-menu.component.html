@@ -13,7 +13,7 @@
         <div class="col">
             <h2>{{resto.name}}</h2>
             <h5>Location:<h6>{{resto.position}}</h6></h5>
-            <h6>Description:{{resto.description}}</h6>
+            <h5>Description:<h6>{{resto.description}}</h6></h5>
         </div>
     </div>
     <div class="row center">
@@ -40,6 +40,7 @@
                             <button class="btn btn-s" (click)="mins()"><i class='bx bx-minus-circle'></i></button>
                             <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
                             <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="n" >
+                            
                             <button class="btn btn-s" (click)="plus()"><i class='bx bx-plus-circle'></i></button>
                             
                         </div>
