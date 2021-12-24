@@ -15,6 +15,7 @@ import { BasketComponent } from './basket/basket.component';
 import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
 import { RestaurentRegisterComponent } from './restaurent/restaurent-register/restaurent-register.component';
 import { HomeComponent } from './home/home.component';
+import { RestaurentLoginComponent } from './restaurent/restaurent-login/restaurent-login.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'',component:HomeComponent },
  {path:'Register',component:RegistreComponent },
  {path:'RegisterRestaurent',component:RestaurentRegisterComponent },
+ {path:'RestaurentLogin',component:RestaurentLoginComponent },
  {path:'login',component:LoginComponent},
  {path:'contact',component:ContactComponent},
 
