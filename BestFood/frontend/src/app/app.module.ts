@@ -23,6 +23,7 @@ import { BasketComponent } from './basket/basket.component';
 import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
 import { RestaurentRegisterComponent } from './restaurent/restaurent-register/restaurent-register.component';
 import { NavHomeComponent } from './nav-home/nav-home.component';
+import { RestaurentLoginComponent } from './restaurent/restaurent-login/restaurent-login.component';
 
 
 
@@ -49,6 +50,7 @@ import { NavHomeComponent } from './nav-home/nav-home.component';
     RestaurentMenuComponent,
     RestaurentRegisterComponent,
     NavHomeComponent,
+    RestaurentLoginComponent
    
   
     
