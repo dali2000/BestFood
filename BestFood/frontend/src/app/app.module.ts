@@ -25,6 +25,9 @@ import { RestaurentRegisterComponent } from './restaurent/restaurent-register/re
 import { NavHomeComponent } from './nav-home/nav-home.component';
 import { RestaurentLoginComponent } from './restaurent/restaurent-login/restaurent-login.component';
 import { AddFoodComponent } from './restaurent/add-food/add-food.component';
+import { RestaurentProfilComponent } from './restaurent/restaurent-profil/restaurent-profil.component';
+import { NavRestComponent } from './nav-rest/nav-rest.component';
+import { MyMenuComponent } from './my-menu/my-menu.component';
 
 
 
@@ -52,7 +55,10 @@ import { AddFoodComponent } from './restaurent/add-food/add-food.component';
     RestaurentRegisterComponent,
     NavHomeComponent,
     RestaurentLoginComponent,
-    AddFoodComponent
+    AddFoodComponent,
+    RestaurentProfilComponent,
+    NavRestComponent,
+    MyMenuComponent
    
   
     
