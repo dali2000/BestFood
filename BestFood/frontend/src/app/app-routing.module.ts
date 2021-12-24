@@ -13,12 +13,14 @@ import { UpdateProfilComponent } from './client/update-profil/update-profil.comp
 import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
 import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
+import { RestaurentRegisterComponent } from './restaurent/restaurent-register/restaurent-register.component';
 
 
 
 const routes: Routes = [
 
  {path:'Register',component:RegistreComponent },
+ {path:'RegisterRestaurent',component:RestaurentRegisterComponent },
  {path:'login',component:LoginComponent},
  {path:'contact',component:ContactComponent},
 
