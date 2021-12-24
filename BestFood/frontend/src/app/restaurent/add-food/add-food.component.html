@@ -14,11 +14,12 @@
             </div>
             <p>img<span style="color: rgb(247, 97, 10);">:</span></p>
             <div class="form-group">
-                <input type="text" name="phone" id="name" class="form-control" placeholder="number phone" value="" [(ngModel)]="food.img">
+                <input type="text" name="phone" id="name" class="form-control" placeholder="Food Image" value="" [(ngModel)]="food.img">
             </div>
             <p>Cate<span style="color: rgb(247, 97, 10);">gory:</span> </p>
             <div class="form-group">
-                <select name="category" [(ngModel)]="food.category" class="form-control" >
+                <select name="category" [(ngModel)]="food.category"  class="form-select" aria-label="Default select example">
+                    <option selected>Choose a food category</option>
                     <option value="diet">diet</option>
                     <option value="desert">desert</option>
                 </select>
