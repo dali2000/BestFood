@@ -22,6 +22,7 @@ import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
 import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
 import { RestaurentRegisterComponent } from './restaurent/restaurent-register/restaurent-register.component';
+import { NavHomeComponent } from './nav-home/nav-home.component';
 
 
 
@@ -47,6 +48,7 @@ import { RestaurentRegisterComponent } from './restaurent/restaurent-register/re
     BasketComponent,
     RestaurentMenuComponent,
     RestaurentRegisterComponent,
+    NavHomeComponent,
    
   
     

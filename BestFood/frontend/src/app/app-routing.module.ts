@@ -14,11 +14,12 @@ import { HistoriqueComponent } from './client/historique/historique.component';
 import { BasketComponent } from './basket/basket.component';
 import { RestaurentMenuComponent } from './restaurent-menu/restaurent-menu.component';
 import { RestaurentRegisterComponent } from './restaurent/restaurent-register/restaurent-register.component';
+import { HomeComponent } from './home/home.component';
 
 
 
 const routes: Routes = [
-
+  {path:'',component:HomeComponent },
  {path:'Register',component:RegistreComponent },
  {path:'RegisterRestaurent',component:RestaurentRegisterComponent },
  {path:'login',component:LoginComponent},
