@@ -12,6 +12,7 @@
     align-items: center;
     text-align: center;
     margin-left: 10%;
+    
 }
 
 .register img {
@@ -31,9 +32,9 @@
 
 .form {
     margin: 20px;
-    width: 500px;
+    width: 360px;
     margin-left: 10%;
-    margin-right: -20%;
+   
 }
 
 .btn {
@@ -86,7 +87,12 @@ a:hover {
         text-align: center;
         margin-left: -10%;
         margin-right: -20%;
+  
+          
+          
+
     }
+
     .logo img {
         width: 900px;
         height: 900px;
@@ -95,6 +101,8 @@ a:hover {
         width: 1300px;
         margin-left: 10%;
         margin-right: -20%;
+        display: block;
+        text-align: -webkit-center;
     }
 }
 
@@ -118,6 +126,7 @@ a:hover {
         width: 400px;
         height: 400px;
     }
+
 }
 
 @media screen and (max-width: 945px) {
@@ -131,13 +140,6 @@ a:hover {
     .logo img {
         width: 300px;
         height: 300px;
-    }
-    .register {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-        margin-left: 0;
     }
 }
 
@@ -181,13 +183,20 @@ a:hover {
         text-align: center;
         margin-left: 10%;
     }
+    .form {
+        width: 400px;
+        margin-left:10px;
+        
+        display: block;
+        text-align: -webkit-center;
+    }
 }
 
 @media screen and (max-width: 395px) {
     .form {
         width: 290px;
         margin-left: 0%;
-        margin-right: -20%;
+       
     }
 }
 
@@ -195,6 +204,6 @@ a:hover {
     .form {
         width: 260px;
         margin-left: 0%;
-        margin-right: -20%;
+        
     }
 }
