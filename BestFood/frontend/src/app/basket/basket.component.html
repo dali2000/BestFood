@@ -23,7 +23,7 @@
                     <td><p>{{carts[i].quantity}}</p></td>
                     <td><p>{{carts[i].order.price}} TND</p></td>
                     <td>
-                        <button class="btn btn-danger"><i class='bx bx-trash'></i></button>
+                        <button class="btn btn-danger" (click)="deleteFromCart(carts[i].order._id)"><i class='bx bx-trash'></i></button>
                     </td>
 
 

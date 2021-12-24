@@ -13,7 +13,7 @@ export class BasketComponent implements OnInit {
 
 
   public form = {
-
+    _id:null,
     token:""
   }
   ngOnInit(): void {
@@ -43,5 +43,17 @@ export class BasketComponent implements OnInit {
     })
 
   }
+  form2:any
+  deleteFromCart(_id:string){
+    this.form2.token = localStorage.getItem('token')
+    this.form2._id = _id;
+    
+    this.http.delete("http://localhost:3000/cart/cart/").subscribe(res =>{
+      
+      console.log(res)  
+    });
+    
+  }
+  
 
 }
