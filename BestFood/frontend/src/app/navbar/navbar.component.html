@@ -21,19 +21,16 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-
+                <a class="nav-link dropdown-toggle" routerLink="/profil" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i> <span style="color: white;">{{user.firstName}} {{user.lastName}}</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" routerLink="/profil">Profil</a></li>
                     <li><a class="dropdown-item" routerLink="/basket">Basket</a></li>
-
                     <li><a class="dropdown-item" (click)="logout()">Déconnexion</a></li>
-
-
                 </ul>
             </li>
+           
         </ul>
 
         <ul class="nav mls-auto">
