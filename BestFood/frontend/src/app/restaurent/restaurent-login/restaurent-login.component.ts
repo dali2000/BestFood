@@ -35,14 +35,14 @@ export class RestaurentLoginComponent implements OnInit {
         this.resto = jwtDecode(this.token);
         console.log(this.resto);
 
-        //redirect after login
-        // if(this.token !=null){
-        //    this.router.navigate((['/profil']))
-        //  }
-        //  else{
-        //   this.router.navigate((['/login']))
+        // redirect after login
+        if(this.token !=null){
+           this.router.navigate((['/RestaurentProfil']))
+         }
+         else{
+          this.router.navigate((['/login']))
 
-        //  }
+         }
     }
   );
 
