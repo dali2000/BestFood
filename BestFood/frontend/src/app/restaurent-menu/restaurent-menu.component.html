@@ -2,34 +2,49 @@
 <div class="container" style="margin-top:20px">
 
     <div class="cover" style="background-image:url({{resto.cover}})">
-        <div class="row" >
+        <div class="row">
             <div class="col center">
-                <img [src]="resto.logo" alt="" class="logo" >
+
 
             </div>
         </div>
 
     </div>
     <div class="row" style="margin:30px">
+        <div class="col-2 center">
+            <img [src]="resto.logo" alt="" class="logo">
+        </div>
+
+    </div>
+    <div class="row center">
+        <h1>{{resto.name}}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <h5><i class='bx bx-current-location' ></i> Location:</h5>
+            <h5><i class='bx bx-mail-send' ></i> Email:</h5>
+            <h5><i class='bx bxs-phone' ></i> Phone:</h5>
+            <h5><i class='bx bxs-folder'></i> Description:</h5>
+        </div>
         <div class="col">
-            <h2>{{resto.name}}</h2>
-            <h5>Location:<h6>{{resto.position}}</h6></h5>
-            <h5>Description:<h6>{{resto.description}}</h6></h5>
-            <h5>Email:<h6>{{resto.email}}</h6></h5>
-            <h5>Phone:<h6>{{resto.phone}}</h6></h5>
+            <h5>{{resto.position}}</h5>
+            <h5>{{resto.email}}</h5>
+            <h5>{{resto.phone}}</h5>
+            <h5>{{resto.description}}</h5>
         </div>
     </div>
     <div class="row center">
         <div class="col">
             <h1>{{resto.name}}<span style="color:rgb(255, 94, 0);">MENU</span></h1><br>
-            
+
         </div>
         <div class='row'>
             <br>
             <!-- ---------- -->
-    
+
             <div class='col' *ngFor="let foods of food">
-    
+
                 <div class='card' style="width: 15rem; height:auto;">
                     <img [src]="foods.img" class='card-img-top'
                         style="width:'150px';height:'auto';margin:auto;margin-top: 10px;">
@@ -42,18 +57,17 @@
                         <div class="row center">
                             <button class="btn btn-s" (click)="mins()"><i class='bx bx-minus-circle'></i></button>
                             <input type="text" name="" id="" [(ngModel)]="foods._id" hidden>
-                            <input type="text" name="qte" id=""class="qte" disabled  placeholder="" [(ngModel)]="n" >
-                            
+                            <input type="text" name="qte" id="" class="qte" disabled placeholder="" [(ngModel)]="n">
+
                             <button class="btn btn-s" (click)="plus()"><i class='bx bx-plus-circle'></i></button>
-                            
+
                         </div>
-                        <button type="button" class="btn btn btn-buy" 
-                           style="margin-top:10px" (click)="buy(foods._id)">
+                        <button type="button" class="btn btn btn-buy" style="margin-top:10px" (click)="buy(foods._id)">
                             <i class='bx bxs-cart-add'></i>BUY NOW
                         </button>
                     </div>
                 </div>
-    
+
                 <br>
                 <!-- Modal -->
                 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -95,9 +109,9 @@
                 </div>/* -->
             </div>
             <br>
-    
+
         </div>
-    
+
     </div>
 
 </div>

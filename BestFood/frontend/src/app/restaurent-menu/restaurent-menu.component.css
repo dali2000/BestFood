@@ -1,5 +1,5 @@
 .logo{
-    width:120px;
+    width:150px;
     height:auto;
     border-radius: 50%;
     border:3px solid rgb(255, 255, 255);
@@ -14,11 +14,11 @@
   }
   .cover{
     border-radius: 15px;
-   
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding:50px;
+    padding:130px;
     box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
     -webkit-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);
     -moz-box-shadow: -1px 5px 17px -3px rgba(0, 0, 0, 0.67);

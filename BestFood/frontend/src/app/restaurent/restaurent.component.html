@@ -8,15 +8,18 @@
         <div class="row">
             <div class="col rest" *ngFor="let resto of restos">
                 <div class="row">
-                    <div class="col" >
+                    <div class="cen">
                         <img [src]="resto.logo" alt="" srcset="" class="img">
                     </div>
-                    <div class="col">
+                </div>
+
+                <div class="row">
+                    <div class="cen">
                         <h6>{{resto.name}}Restaurent</h6><br>
                         <h6> {{resto.position}} </h6>
                     </div>
                     <div class="col">
-                        <button class="btn btn-buy2" routerLink="/RestaurantMenu/{{resto.email}}"><i class='bx bx-food-menu '></i></button>
+                        <button class="btn btn-buy2" routerLink="/RestaurantMenu/{{resto.email}}"><i class='bx bx-food-menu '></i>Menu </button>
                     </div>
                 </div>
             </div>
