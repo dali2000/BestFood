@@ -38,7 +38,7 @@ export class DietFoodsComponent implements OnInit {
 
   }
 
-   n = 0;
+   n = 1;
   fd = {
     _id: "",
     qte: 0
@@ -49,8 +49,8 @@ export class DietFoodsComponent implements OnInit {
   }
   mins() {
     this.n--;
-    if (this.n < 0) {
-      this.n = 0;
+    if (this.n <2) {
+      this.n = 1;
     }
   }
   fod={
@@ -65,7 +65,7 @@ export class DietFoodsComponent implements OnInit {
     this.fod.quantity = this.n.toString();
     
  
-     this.n = 0
+     this.n = 1
      console.log(this.fod)
     this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
       console.log(res)

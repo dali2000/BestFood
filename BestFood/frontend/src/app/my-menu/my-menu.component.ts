@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import jwtDecode from 'jwt-decode';
@@ -52,5 +52,25 @@ export class MyMenuComponent implements OnInit {
 
     })
 
+  }
+
+  public form2 = {
+    _id:null,
+    token:""
+  }
+  delete(form2:any,_id:string){
+    
+    form2.token = localStorage.getItem('token')
+    form2._id = _id
+    console.log(form2)
+    let headers = new HttpHeaders({'token': form2.token,"_id":form2._id})
+    console.log(headers);
+    this.http.delete("http://localhost:3000/resto/delFood/",{headers:headers}).subscribe(res =>{
+
+      console.log(res)  
+      this.ngOnInit()
+    });
+
+   
   }
 }
