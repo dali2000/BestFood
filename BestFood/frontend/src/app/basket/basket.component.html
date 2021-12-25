@@ -26,7 +26,7 @@
                     <td><p>{{carts[i].quantity}}</p></td>
                     <td><p>{{carts[i].order.price}} TND</p></td>
                     <td>
-                        <button class="btn btn-danger" (click)="deleteFromCart(carts[i].order._id)"><i class='bx bx-trash'></i></button>
+                        <button class="btn btn-danger" (click)="deleteFromCart(form2,carts[i]._id)"><i class='bx bx-trash'></i></button>
                     </td>
 
 
@@ -34,7 +34,7 @@
                 
             </tbody>
         </table>
-        <h4>Total:{{total}} TND</h4>
+      
     </div>
 
     <span style="float:right; margin-right:10px">

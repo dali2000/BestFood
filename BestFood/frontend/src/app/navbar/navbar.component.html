@@ -20,9 +20,12 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/contact" id="navc"><i class='bx bxs-chat'></i> Contact</a>
             </li>
+            <li class="nav-item">
+
+            </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" routerLink="/profil" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i> <span
                         style="color: white;">{{user.firstName}} {{user.lastName}}</span>
@@ -31,6 +34,8 @@
                     <li><a class="dropdown-item" routerLink="/profil">Profil</a></li>
                     <li><a class="dropdown-item" routerLink="/basket">Basket</a></li>
                     <li><a class="dropdown-item" (click)="logout()">Déconnexion</a></li>
+
+                    
                 </ul>
             </li>
 
