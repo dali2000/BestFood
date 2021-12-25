@@ -20,23 +20,21 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/contact" id="navc"><i class='bx bxs-chat'></i> Contact</a>
             </li>
-            <li class="nav-item">
 
-            </li>
+
 
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-expanded="false">
                     <i class='bx bx-user' style="color: rgb(255, 255, 255);"></i> <span
-                        style="color: white;">{{user.firstName}} {{user.lastName}}</span>
+                    style="color: white;">{{user.firstName}} {{user.lastName}}</span>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" routerLink="/profil">Profil</a></li>
-                    <li><a class="dropdown-item" routerLink="/basket">Basket</a></li>
-                    <li><a class="dropdown-item" (click)="logout()">Déconnexion</a></li>
-
-                    
-                </ul>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="/profil">Profil</a>
+                    <a class="dropdown-item" routerLink="/basket">Basket</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" (click)="logout()">Déconnexion</a>
+                </div>
             </li>
 
         </ul>
@@ -44,10 +42,10 @@
         <ul class="nav mls-auto">
 
             <li class="nav-item">
-                <a class="btn btn-light" routerLink="/basket"><i class='bx bxs-cart'></i>Basket 
-                <span class="badge badge-light" style="background-color: red;color:white;padding:5px;">{{n}}</span>
+                <a class="btn btn-light" routerLink="/basket"><i class='bx bxs-cart'></i>Basket
+                    <span class="badge badge-light" style="background-color: red;color:white;padding:5px;">{{n}}</span>
                 </a>
-                
+
             </li>
             <li class="nav-item">
                 <a class="nav-link scroll nav2" href="#" id="navc"><i class="fa fa-phone" id="navc"></i>
