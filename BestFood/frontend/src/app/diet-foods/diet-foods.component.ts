@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-diet-foods',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class DietFoodsComponent implements OnInit {
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient,route: ActivatedRoute) { }
   token:any;
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
@@ -17,15 +17,27 @@ export class DietFoodsComponent implements OnInit {
   }
   data :any;
   foods:any;
+ 
+  foodDiet:any= [];
+  j = 0;
   getAllFood(){
     this.http.get("http://localhost:3000/food/foods").subscribe(res =>{
       
       this.data = res;
      this.foods =this.data.food;
-    
+     
+      for(var i=0; i<this.foods.length;i++){
+        if(this.foods[i].category == "diet"){
+          console.log(this.foods[i])
+          this.foodDiet[this.j] = this.foods[i]
+          this.j++;
+        }
+      }
+      console.log(this.foodDiet)
     });
 
   }
+
    n = 0;
   fd = {
     _id: "",

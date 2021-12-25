@@ -11,18 +11,19 @@
                 <tr>
                     <th scope="col">Product</th>
                     <th scope="col">Name</th>
-                    <!-- <th scope="col">quantity</th>
                     <th scope="col">Price</th>
-                    <th scope="col">Edit</th> -->
+                    <th scope="col">Edit</th>
 
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let fod of foods; index as i;">
-                    <td><img [src]="fod.img" alt="" class="img"></td>
-                    <td><p>{{fod[i]}}</p></td>
-  
-
+                <tr *ngFor="let food of resto; index as i;">
+                    <td><img [src]="food.img" alt="" class="img"></td>
+                    <td><p>{{food.name}}</p></td>
+                    <td><p>{{food.price}}</p></td>
+                    <td>
+                        <button class="btn btn-danger"><i class='bx bx-trash'></i></button>
+                    </td>
                 </tr>
                 
             </tbody>

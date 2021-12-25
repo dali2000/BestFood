@@ -32,6 +32,7 @@ import { MyMenuComponent } from './my-menu/my-menu.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,7 @@ import { MyMenuComponent } from './my-menu/my-menu.component';
     AddFoodComponent,
     RestaurentProfilComponent,
     NavRestComponent,
-    MyMenuComponent
+    MyMenuComponent,
    
   
     

@@ -11,7 +11,7 @@ export class RestaurentComponent implements OnInit {
 
   constructor(private router:Router,private http:HttpClient) { }
   p1="REST"
-  p2="AURENT"
+  p2="AURENTS"
   ngOnInit(): void {
     this.getResto()
   }

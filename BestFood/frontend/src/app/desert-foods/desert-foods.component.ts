@@ -18,12 +18,20 @@ export class DesertFoodsComponent implements OnInit {
   }
   data :any;
   foods:any;
+  foodDiet:any= [];
+  j = 0;
   getAllFood(){
     this.http.get("http://localhost:3000/food/foods").subscribe(res =>{
       
       this.data = res;
      this.foods =this.data.food;
-    
+     for(var i=0; i<this.foods.length;i++){
+      if(this.foods[i].category == "desert"){
+        console.log(this.foods[i])
+        this.foodDiet[this.j] = this.foods[i]
+        this.j++;
+      }
+    }
     });
 
   }

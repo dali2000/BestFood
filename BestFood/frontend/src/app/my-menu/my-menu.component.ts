@@ -14,40 +14,43 @@ export class MyMenuComponent implements OnInit {
 
 
   token: any;
-  resto: any;
+  restos: any;
   data: any;
+  data1: any;
   foods: any;
-  food :any
 
+  resto: any;
   ngOnInit(): void {
     this.token = localStorage.getItem('token');
     this.data = jwtDecode(this.token);
-    this.resto = this.data.restaurant.foods;
+    this.restos = this.data.restaurant.foods;
    
     this.getAllFood()
   }
   n=0
+
+  nb = 0;
   getAllFood() {
-    this.http.get("http://localhost:3000/food/foods").subscribe(res => {
+    this.token = localStorage.getItem('token');
+    this.data = jwtDecode(this.token);
+    this.http.get("http://localhost:3000/resto/restaurants").subscribe(res => {
 
-      this.data = res;
-      this.foods = this.data.food;
-      // console.log(this.resto)
-      for (var i = 0; i < this.foods.length; i++) {
-        for (var j = 0; j < this.resto.length; j++) {
-
-          if (this.foods[i]._id == this.resto[j]) {
-
-            
-            this.food = this.foods[i]
-            this.n++
-          }
-
+      this.data1 = res;
+      
+      this.restos = this.data.restaurant;
+      
+      this.nb = this.data1.restaurants.length
+    
+      for (let i = 0; i < this.nb; i++) {
+       
+        if (this.data1.restaurants[i]._id == this.restos._id) {
+        
+          this.resto = this.data1.restaurants[i].foods;
+         
         }
       }
-   
-    });
-    console.log(this.food)
+
+    })
 
   }
 }
