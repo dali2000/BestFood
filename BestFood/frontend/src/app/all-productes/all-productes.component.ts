@@ -17,6 +17,7 @@ export class AllProductesComponent implements OnInit {
   }
   data :any;
   foods:any;
+  
   n=0
 
  
