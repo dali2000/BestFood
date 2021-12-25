@@ -56,12 +56,10 @@ export class BasketComponent implements OnInit {
     this.http.delete("http://localhost:3000/cart/cart/",{headers:headers}).subscribe(res =>{
 
       console.log(res)  
-      if(this.carts.length ==0 ){
-        this.total = 0    
-      }
+      this.ngOnInit()
     });
 
-    this.ngOnInit()
+   
   }
   
 

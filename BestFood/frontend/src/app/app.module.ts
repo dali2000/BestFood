@@ -28,6 +28,9 @@ import { AddFoodComponent } from './restaurent/add-food/add-food.component';
 import { RestaurentProfilComponent } from './restaurent/restaurent-profil/restaurent-profil.component';
 import { NavRestComponent } from './nav-rest/nav-rest.component';
 import { MyMenuComponent } from './my-menu/my-menu.component';
+import { UpdateRestoComponent } from './restaurent/update-resto/update-resto.component';
+
+
 
 
 
@@ -60,6 +63,9 @@ import { MyMenuComponent } from './my-menu/my-menu.component';
     RestaurentProfilComponent,
     NavRestComponent,
     MyMenuComponent,
+    UpdateRestoComponent,
+   
+    
    
   
     

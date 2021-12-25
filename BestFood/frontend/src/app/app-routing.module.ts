@@ -19,6 +19,7 @@ import { RestaurentLoginComponent } from './restaurent/restaurent-login/restaure
 import { AddFoodComponent } from './restaurent/add-food/add-food.component';
 import { RestaurentProfilComponent } from './restaurent/restaurent-profil/restaurent-profil.component';
 import { MyMenuComponent } from './my-menu/my-menu.component';
+import { UpdateRestoComponent } from './restaurent/update-resto/update-resto.component';
 
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'RegisterRestaurent', component: RestaurentRegisterComponent },
   { path: 'RestaurentLogin', component: RestaurentLoginComponent },
   { path: 'RestaurentProfil', component: RestaurentProfilComponent }, 
+  { path: 'UpdateProfilRestaurent', component: UpdateRestoComponent }, 
   { path: 'MyMenu', component: MyMenuComponent },
   { path: 'AddFood', component: AddFoodComponent },
   { path: 'login', component: LoginComponent },
