@@ -43,16 +43,25 @@ export class BasketComponent implements OnInit {
     })
 
   }
-  form2:any
-  deleteFromCart(_id:string){
-    this.form2.token = localStorage.getItem('token')
-    this.form2._id = _id;
+  public form2 = {
+    _id:null,
+    token:""
+  }
+  deleteFromCart(form2:any,_id:string){
     
-    this.http.delete("http://localhost:3000/cart/cart/").subscribe(res =>{
-      
+    form2.token = localStorage.getItem('token')
+    form2._id = _id
+    let headers = new HttpHeaders({'token': form2.token,"_id":form2._id})
+    console.log(headers);
+    this.http.delete("http://localhost:3000/cart/cart/",{headers:headers}).subscribe(res =>{
+
       console.log(res)  
+      if(this.carts.length ==0 ){
+        this.total = 0    
+      }
     });
-    
+
+    this.ngOnInit()
   }
   
 

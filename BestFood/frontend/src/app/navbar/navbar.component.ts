@@ -28,11 +28,12 @@ export class NavbarComponent implements OnInit {
   carts:any;
   total=0
   ngOnInit(): void {
+    this.getbasket(this.form)
     this.token = localStorage.getItem('token');
     this.data = jwtDecode(this.token);
     this.user = this.data.user;
     console.log(this.user);
-    this.getbasket(this.form)
+    
   }
   logout(){
     localStorage.removeItem('token');
@@ -46,10 +47,6 @@ export class NavbarComponent implements OnInit {
     this.http.get("http://localhost:3000/cart/cart",{headers:headers}).subscribe(res=>{
       this.data1 = res;
       this.n = this.data1.cart.length;
-      
-
-
-
     })
 
   }
