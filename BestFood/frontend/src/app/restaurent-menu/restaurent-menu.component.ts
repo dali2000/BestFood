@@ -45,7 +45,7 @@ export class RestaurentMenuComponent implements OnInit {
 
   }
 
-  n = 0;
+  n = 1;
   
  
    
@@ -56,8 +56,8 @@ export class RestaurentMenuComponent implements OnInit {
   }
   mins() {
     this.n--;
-    if (this.n < 0) {
-      this.n = 0;
+    if (this.n < 2) {
+      this.n = 1;
     }
   }
 
@@ -80,7 +80,7 @@ fod={
     this.fod.quantity = this.n.toString();
     
  
-     this.n = 0
+     this.n = 1
      console.log(this.fod)
     this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
       console.log(res)
