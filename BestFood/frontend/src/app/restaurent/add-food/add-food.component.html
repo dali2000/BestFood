@@ -2,32 +2,39 @@
 <div class="container" style="margin:50px">
     <h1 style="text-align:center">Add<span style="color:rgb(255, 94, 0);">Food</span></h1><br>
     <div class="box">
-        <form #f="ngForm" >
-
+        <form #f="ngForm">
+            <div class="{{alert}}" [hidden]=!message>
+                {{message}}
+            </div>
             <p>Na<span style="color: rgb(247, 97, 10);">me:</span> </p>
             <div class="form-group">
-                <input type="text" name="lastName" id="name" class="form-control" placeholder="Food name" [(ngModel)]="food.name" ngModel>
+                <input type="text" name="lastName" id="name" class="form-control" placeholder="Food name"
+                    [(ngModel)]="food.name" ngModel>
             </div>
             <p>Pri<span style="color: rgb(247, 97, 10);">ce:</span></p>
             <div class="form-group">
-                <input type="text" name="firsName" id="price" class="form-control" placeholder="Food price" value="" [(ngModel)]="food.price">
+                <input type="text" name="firsName" id="price" class="form-control" placeholder="Food price" value=""
+                    [(ngModel)]="food.price">
             </div>
             <p>img<span style="color: rgb(247, 97, 10);">:</span></p>
             <div class="form-group">
-                <input type="text" name="phone" id="name" class="form-control" placeholder="Food Image" value="" [(ngModel)]="food.img">
+                <input type="text" name="phone" id="name" class="form-control" placeholder="Food Image" value=""
+                    [(ngModel)]="food.img">
             </div>
             <p>Cate<span style="color: rgb(247, 97, 10);">gory:</span> </p>
             <div class="form-group">
-                <select name="category" [(ngModel)]="food.category"  class="form-select" aria-label="Default select example">
+                <select name="category" [(ngModel)]="food.category" class="form-select"
+                    aria-label="Default select example">
                     <option selected>Choose a food category</option>
                     <option value="diet">diet</option>
                     <option value="desert">desert</option>
                 </select>
-               
+
             </div>
-    
+
             <div>
-                <input type="submit" value="Add Food" class="btn btn-buy4" (click)="addFood(food)">
+                <input type="submit" value="Add Food" class="btn btn-buy4" (click)="addFood(food)" >
+
             </div>
         </form>
     </div>

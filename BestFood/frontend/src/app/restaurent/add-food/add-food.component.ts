@@ -17,7 +17,7 @@ export class AddFoodComponent implements OnInit {
   }
   token:any;
  
-  
+  data:any;
   food = {
     name:null,
     price:null,
@@ -25,11 +25,22 @@ export class AddFoodComponent implements OnInit {
     category:null,
     token:null
   }
-  
+  public message =""
+  public alert = ""
  
   addFood(food:any){
     this.http.post("http://localhost:3000/food/food/",food).subscribe(res =>{
       console.log(res)
+      this.data =res
+    
+      if(this.data.message == "Food saved successfully"){
+        this.food.category = null
+        this.food.price = null
+        this.food.img = null
+        this.food.name = null
+        this.message = "Food saved successfully"
+        this.alert = "alert alert-success"
+      }
     })
   }
 }
