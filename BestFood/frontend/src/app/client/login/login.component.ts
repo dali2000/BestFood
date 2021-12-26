@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
         //redirect after login
         if(this.token !=null){
-           this.router.navigate((['/profil']))
+           this.router.navigate(['/Menu/allProductes'])
          }
          else{
           this.router.navigate((['/login']))

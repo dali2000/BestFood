@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurent-register',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class RestaurentRegisterComponent implements OnInit {
 
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,7 @@ export class RestaurentRegisterComponent implements OnInit {
   register(form: any) {
     this.http.post("http://localhost:3000/resto/register/", form).subscribe(res=>{
       console.log(res)
+      this.router.navigate((['/RestaurentLogin']))
     });
   }
 
