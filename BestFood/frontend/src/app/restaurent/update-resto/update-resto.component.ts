@@ -39,11 +39,11 @@ export class UpdateRestoComponent implements OnInit {
     this.http.post("http://localhost:3000/resto/update/", form).subscribe(res => {
       localStorage.removeItem('token');
       this.data = res;
-      this.token = this.data.token;
+      this.token = this.data.token;     
 
       localStorage.setItem('token', this.data.token);
       this.token = localStorage.getItem('token');
-     
+
       console.log(res);
 
     }
