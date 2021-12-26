@@ -5,7 +5,9 @@
         <h1><span style="color: rgb(247, 97, 10);">U</span>pdate <span style="color: rgb(247, 97, 10);">Re</span>staurent
         </h1>
         <form #f="ngForm">
-
+            <div class="{{alert}}" [hidden]=!message>
+                {{message}}
+            </div>
             <p>Na<span style="color: rgb(247, 97, 10);">me:</span> </p>
             <div class="form-group">
                 <input type="text" name="name" id="name" class="form-control" placeholder="Name"

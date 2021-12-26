@@ -39,7 +39,11 @@ export class RestaurentMenuComponent implements OnInit {
           console.log(this.food)
         }
       }
-
+      for(var i = 0; i <this.food.length;i++){
+        this.food[i].quantity = 1
+        this.food[i].postion = i
+        console.log(this.food[i]);
+       }
     })
 
 
@@ -51,33 +55,32 @@ export class RestaurentMenuComponent implements OnInit {
    
 
   
-  plus() {
-    this.n++;
+  fod={
+    _id:null,
+    token:"",
+    quantity:""
+  
   }
-  mins() {
-    this.n--;
-    if (this.n < 2) {
-      this.n = 1;
+  plus(foods:any) {
+    foods.quantity++
+    console.log(foods)
+    
+  }
+  mins(foods:any) {
+
+    if(foods.quantity<=0){
+      foods.quantity =1
     }
+    foods.quantity--
+
+
   }
 
-fod={
-  _id:null,
-  token:"",
-  quantity:""
-}
-
-
-
-
-
- 
- 
-  buy(id:any){
+    buy(food:any,id:any){
     
     this.fod._id = id;
     this.fod.token = this.token;
-    this.fod.quantity = this.n.toString();
+    this.fod.quantity = food.quantity.toString();
     
  
      this.n = 1
@@ -85,8 +88,8 @@ fod={
     this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
       console.log(res)
     })
+  
   }
-
 
 
 

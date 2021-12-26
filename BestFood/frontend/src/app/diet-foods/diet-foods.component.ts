@@ -27,6 +27,8 @@ export class DietFoodsComponent implements OnInit {
      this.foods =this.data.food;
      
       for(var i=0; i<this.foods.length;i++){
+        this.foods[i].quantity = 1
+        this.foods[i].postion = i
         if(this.foods[i].category == "diet"){
           console.log(this.foods[i])
           this.foodDiet[this.j] = this.foods[i]
@@ -44,25 +46,34 @@ export class DietFoodsComponent implements OnInit {
     qte: 0
   }
 
-  plus() {
-    this.n++;
-  }
-  mins() {
-    this.n--;
-    if (this.n <2) {
-      this.n = 1;
-    }
-  }
   fod={
     _id:null,
     token:"",
     quantity:""
+  
   }
-    buy(id:any){
+  plus(food:any) {
+    
+    
+    food.quantity++
+    console.log(food)
+    
+  }
+  mins(food:any) {
+
+    if(food.quantity<=0){
+      food.quantity =1
+    }
+    food.quantity--
+
+
+  }
+
+    buy(food:any,id:any){
     
     this.fod._id = id;
     this.fod.token = this.token;
-    this.fod.quantity = this.n.toString();
+    this.fod.quantity = food.quantity.toString();
     
  
      this.n = 1
@@ -70,6 +81,7 @@ export class DietFoodsComponent implements OnInit {
     this.http.post("http://localhost:3000/cart/cart/",this.fod).subscribe(res=>{
       console.log(res)
     })
+  
   }
 }
 

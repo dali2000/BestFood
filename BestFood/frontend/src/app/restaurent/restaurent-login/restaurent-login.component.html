@@ -6,13 +6,16 @@
     </div>
     <div class="login-content">
         <div class="form">
+
             <img src="../assets/img/res.jpg" >
 
             <h2 class="title">Welcome</h2>
 
             <form #f="ngForm">
 
-
+                <div class="{{alert}}" [hidden]=!message>
+                    {{message}}
+                </div>
                 <div class="div">
                     <div class="form-floating mb-3">
                         <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email">

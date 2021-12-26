@@ -17,40 +17,54 @@ export class AllProductesComponent implements OnInit {
   }
   data :any;
   foods:any;
-  
+
   n=1
 
  
 
   getAllFood(){
+   
     this.http.get("http://localhost:3000/food/foods").subscribe(res =>{
       
       this.data = res;
      this.foods =this.data.food;
-    
+     
+     for(var i = 0; i <this.foods.length;i++){
+      this.foods[i].quantity = 1
+      this.foods[i].postion = i
+      console.log(this.foods[i]);
+     }
     });
 
-  }
-
-  plus() {
-    this.n++;
-  }
-  mins() {
-    this.n--;
-    if (this.n <2) {
-      this.n = 1;
-    }
   }
   fod={
     _id:null,
     token:"",
     quantity:""
+  
   }
-    buy(id:any){
+  plus(food:any) {
+    
+    
+    food.quantity++
+    console.log(food)
+    
+  }
+  mins(food:any) {
+
+    if(food.quantity<=0){
+      food.quantity =1
+    }
+    food.quantity--
+
+
+  }
+
+    buy(food:any,id:any){
     
     this.fod._id = id;
     this.fod.token = this.token;
-    this.fod.quantity = this.n.toString();
+    this.fod.quantity = food.quantity.toString();
     
  
      this.n = 1
