@@ -28,9 +28,11 @@ export class UpdateProfilComponent implements OnInit {
 
   ngOnInit(): void {
 
- /*  this.token = localStorage.getItem('token');
+ this.token = localStorage.getItem('token');
       this.user = jwtDecode(this.token);
-      console.log(this.user);*/
+      this.form = this.user.user;
+      this.form.password=null;
+
   }
   update(form:any){
     form.token=localStorage.getItem('token');
@@ -43,7 +45,7 @@ export class UpdateProfilComponent implements OnInit {
         localStorage.setItem('token',this.data.token);
         this.token = localStorage.getItem('token');
         //this.user = jwtDecode(this.token);
-        console.log(res);
+       // console.log(res);
         }
 
 
