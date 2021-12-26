@@ -29,6 +29,8 @@ import { RestaurentProfilComponent } from './restaurent/restaurent-profil/restau
 import { NavRestComponent } from './nav-rest/nav-rest.component';
 import { MyMenuComponent } from './my-menu/my-menu.component';
 import { UpdateRestoComponent } from './restaurent/update-resto/update-resto.component';
+import { ContasComponent } from './admin/contas/contas.component';
+import { SideBarAdminComponent } from './admin/side-bar-admin/side-bar-admin.component';
 
 
 
@@ -64,11 +66,14 @@ import { UpdateRestoComponent } from './restaurent/update-resto/update-resto.com
     NavRestComponent,
     MyMenuComponent,
     UpdateRestoComponent,
-   
-    
-   
-  
-    
+    ContasComponent,
+    SideBarAdminComponent,
+
+
+
+
+
+
   ],
   imports: [
     BrowserModule,
