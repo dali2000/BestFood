@@ -30,6 +30,8 @@ export class UpdateRestoComponent implements OnInit {
     password:null,
     token:null
   }
+  public message =""
+  public alert = ""
   update(form: any) {
     form.token = localStorage.getItem('token');
      console.log(this.form)
@@ -41,12 +43,14 @@ export class UpdateRestoComponent implements OnInit {
 
       localStorage.setItem('token', this.data.token);
       this.token = localStorage.getItem('token');
-      //this.user = jwtDecode(this.token);
+     
       console.log(res);
+
     }
 
 
     );
+    
 
   }
 

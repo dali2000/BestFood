@@ -22,7 +22,9 @@ export class RestaurentLoginComponent implements OnInit {
   public form = {
     email:null,
     password:null
-  }
+  }  
+  public message =""
+  public alert = ""
 
   login(form:any){
     this.http.post("http://localhost:3000/resto/login/",form).subscribe(res=>{
@@ -39,14 +41,15 @@ export class RestaurentLoginComponent implements OnInit {
         if(this.token !=null){
            this.router.navigate((['/RestaurentProfil']))
          }
-         else{
-          this.router.navigate((['/login']))
-
-         }
+         
+  
     }
   );
-
-  //console.log(this.token)
+    if(this.token == undefined){
+      this.message ="plz check you information"
+      this.alert="alert alert-danger"
+    }
+  console.log(this.token)
 
  
   
