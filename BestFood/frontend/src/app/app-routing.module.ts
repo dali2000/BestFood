@@ -20,6 +20,11 @@ import { AddFoodComponent } from './restaurent/add-food/add-food.component';
 import { RestaurentProfilComponent } from './restaurent/restaurent-profil/restaurent-profil.component';
 import { MyMenuComponent } from './my-menu/my-menu.component';
 import { UpdateRestoComponent } from './restaurent/update-resto/update-resto.component';
+import { HommeComponent } from './admin/homme/homme.component';
+import { ProfilAdminComponent } from './admin/profil-admin/profil-admin.component';
+import { UsersComponent } from './admin/users/users.component';
+import { RestoComponent } from './admin/resto/resto.component';
+import { ContasComponent } from './admin/contas/contas.component';
 
 
 
@@ -28,8 +33,8 @@ const routes: Routes = [
   { path: 'Register', component: RegistreComponent },
   { path: 'RegisterRestaurent', component: RestaurentRegisterComponent },
   { path: 'RestaurentLogin', component: RestaurentLoginComponent },
-  { path: 'RestaurentProfil', component: RestaurentProfilComponent }, 
-  { path: 'UpdateProfilRestaurent', component: UpdateRestoComponent }, 
+  { path: 'RestaurentProfil', component: RestaurentProfilComponent },
+  { path: 'UpdateProfilRestaurent', component: UpdateRestoComponent },
   { path: 'MyMenu', component: MyMenuComponent },
   { path: 'AddFood', component: AddFoodComponent },
   { path: 'login', component: LoginComponent },
@@ -54,7 +59,14 @@ const routes: Routes = [
   { path: 'Menu', component: MenuComponent },
   { path: 'Restaurent', component: RestaurentComponent },
   { path: 'Restaurant', component: RestaurentComponent },
-  { path: 'RestaurantMenu/:email', component: RestaurentMenuComponent }
+  { path: 'RestaurantMenu/:email', component: RestaurentMenuComponent },
+
+  {path:'admin/homme',component:HommeComponent},
+  {path:'admin/profil',component:ProfilAdminComponent},
+  {path:'admin/users',component:UsersComponent},
+  {path:'admin/resto',component:RestoComponent},
+  {path:'admin/contacts',component:ContasComponent}
+
 
 
 
