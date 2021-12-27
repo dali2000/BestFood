@@ -30,6 +30,9 @@ export class UpdateRestoComponent implements OnInit {
     password:null,
     token:null
   }
+  public form2 ={
+    cpassword:null
+  }
   public message =""
   public alert = ""
   update(form: any) {
@@ -44,13 +47,19 @@ export class UpdateRestoComponent implements OnInit {
       localStorage.setItem('token', this.data.token);
       this.token = localStorage.getItem('token');
 
-      console.log(res);
-
+      console.log(this.data.success);
+      if(this.data.success == true){
+        this.message="restaurant updated successfully!"
+        this.alert = "alert alert-success"
+      }else{
+        this.message="something went wrong!"
+        this.alert = "alert alert-danger"
+      }
     }
 
 
     );
-    
+
 
   }
 

@@ -48,6 +48,9 @@ body {
     
     
 }
+label{
+    text-align: left;
+}
 
 .login-content img {
     height: 100px;
