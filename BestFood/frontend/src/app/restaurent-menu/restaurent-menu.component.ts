@@ -63,15 +63,17 @@ export class RestaurentMenuComponent implements OnInit {
   }
   plus(foods:any) {
     foods.quantity++
-    console.log(foods)
+    //console.log(foods)
     
   }
   mins(foods:any) {
 
-    if(foods.quantity<=0){
+    if(foods.quantity<=1){
       foods.quantity =1
     }
-    foods.quantity--
+    else{    
+      foods.quantity--
+    }
 
 
   }

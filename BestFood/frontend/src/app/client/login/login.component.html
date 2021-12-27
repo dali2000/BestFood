@@ -12,22 +12,27 @@
 
             <form #f="ngForm">
 
-
+                <div class="{{alert}}" [hidden]=!message>
+                    {{message}}
+                </div>
                 <div class="div">
+
                     <div class="form-floating mb-3">
-                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email">
                         <label for="floatingInput">Email</label>
+                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email" required>
+
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password">
                         <label for="floatingPassword">Password </label>
+
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password" required>
                     </div>
                 </div>
 
 
                 <a routerLink="/Register">Creat user account?</a><br>
                 <a routerLink="/RestaurentLogin">You are restaurant?</a><br>
-                 <button type="submit" class="btn btn-primary" (click)="login(form)">Login</button><br> <br>
+                <button type="submit" class="btn btn-primary" (click)="login(form)" [disabled]="!f.valid">Login</button><br> <br>
 
             </form>
         </div>

@@ -24,6 +24,11 @@ export class UpdateProfilComponent implements OnInit {
     password:null,
     token:null
   }
+  public forme = {
+    cpassword:null
+
+  }
+  
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
