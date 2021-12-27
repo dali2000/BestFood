@@ -15,6 +15,9 @@ const foodRoutes = require('./Routes/food');
 //
 const userRoutes = require('./Routes/users');
 const cartRoutes = require('./Routes/cart');
+// import admin routes
+const adminRoutes = require('./Routes/admin');
+
 // DB connection
 //-----------------------------------------------//
 app.use(function(req, res, next) {
@@ -53,7 +56,8 @@ app.use('/cart', cartRoutes);
 app.use('/resto', restaurantRoutes);
 app.use('/food', foodRoutes);
 
-
+// Admin routes
+app.use('/admin',adminRoutes);
 
 //START APP SERVER
 //---------------------------------------//
