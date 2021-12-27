@@ -34,7 +34,7 @@ export class UsersComponent implements OnInit {
      this.message = this.data1.msg;
      this.alert = "alert alert-success"
    })
-  console.log(_id)
+
  }
 
 }
