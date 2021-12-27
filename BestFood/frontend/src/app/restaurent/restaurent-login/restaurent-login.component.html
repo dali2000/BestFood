@@ -18,12 +18,14 @@
                 </div>
                 <div class="div">
                     <div class="form-floating mb-3">
-                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email">
                         <label for="floatingInput">Email</label>
+                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" #email="ngModel" [(ngModel)]="form.email" required>
+                        
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password">
                         <label for="floatingPassword">Password </label>
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password" #password="ngModel" [(ngModel)]="form.password"required>
+                        
                     </div>
                 </div>
 

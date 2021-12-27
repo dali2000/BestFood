@@ -12,47 +12,55 @@
 
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" placeholder="name" name="name" [(ngModel)]="form.name">
-                    <label for="floatingInput">Name</label>
+                    <label for="floatingInput" >Name</label>
+                    <input type="text" class="form-control" placeholder="name" name="name" [(ngModel)]="form.name" required>
+                    
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="form.email">
                     <label for="floatingInput">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="form.email"required>
+                    
                 </div>
 
 
 
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="" placeholder="password" name="password"
-                        [(ngModel)]="form.password">
                     <label for="floatingPassword">Passowrd</label>
+                    <input type="password" class="form-control" id="" placeholder="password" name="password"
+                        [(ngModel)]="form.password" required>
+                   
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="" placeholder="name@example.com" name="phone"
-                        [(ngModel)]="form.phone">
                     <label for="floatingPassword">Phone </label>
+                    <input type="text" class="form-control" id="" placeholder="name@example.com" name="phone"
+                        [(ngModel)]="form.phone" required>
+                   
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="" placeholder="Postion" name="positon"
-                        [(ngModel)]="form.position">
                     <label for="floatingPassword">Postion</label>
+                    <input type="text" class="form-control" id="" placeholder="Postion" name="positon"
+                        [(ngModel)]="form.position"required>
+                    
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="" placeholder="Logo" name="logo"
-                        [(ngModel)]="form.logo">
                     <label for="floatingPassword">Logo</label>
+                    <input type="text" class="form-control" id="" placeholder="Logo" name="logo"
+                        [(ngModel)]="form.logo"required>
+                    
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="" placeholder="Logo" name="cover"
-                        [(ngModel)]="form.cover">
                     <label for="floatingPassword">Cover</label>
+                    <input type="text" class="form-control" id="" placeholder="Logo" name="cover"
+                        [(ngModel)]="form.cover"required>
+                    
                 </div>
                 <div class="form-floating mb-3">
+                    <label for="floatingPassword" >Description</label> 
                     <textarea type="text" class="form-control" id="" placeholder="Logo" name="description"
-                        [(ngModel)]="form.description"></textarea>
-                    <label for="floatingPassword">Description</label>
+                        [(ngModel)]="form.description" required></textarea>
+                   
                 </div>
                 <a routerLink="/RestaurentLogin">You have an account?</a>
 
