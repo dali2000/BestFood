@@ -20,18 +20,18 @@ export class LoginComponent implements OnInit {
   user:any;
 
   ngOnInit(): void {
-   
+
   }
 
   public message =""
   public alert = ""
 
-  
+
   public form = {
     email:null,
     password:null
   }
-  
+
   // authU(f:any){
   //   let data=f.value
   //   this.http.get("http://localhost:3000/test").subscribe(response=>console.log(response),err=>console.log(err))
@@ -50,26 +50,32 @@ export class LoginComponent implements OnInit {
         //console.log(this.user);
 
         //redirect after login
-        
+
     }
-   
+
   );
   if(this.token !=null){
     this.router.navigate(['/Menu/allProductes'])
+    if (this.user.user.Role == 'admin') {
+      this.router.navigate(['/admin/homme'])
+    }
+    else {
+      this.router.navigate(['/Menu/allProductes'])
+    }
   }
   else{
-  
+
      this.message ="plz check you information"
      this.alert="alert alert-danger"
-   
+
 
   }
 
   //console.log(this.token)
 
- 
-  
+
+
   }
 
-  
+
 }
