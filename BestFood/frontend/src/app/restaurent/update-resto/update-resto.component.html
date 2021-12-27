@@ -47,7 +47,7 @@
                     value="" [(ngModel)]="form.password" required>
             </div>
             <div>
-                <input type="submit" value="UPDATE" class="btn btn-buy4" (click)="update(form)" >
+                <input type="submit" value="UPDATE" class="btn btn-buy4" (click)="update(form)" [disabled]="!f.valid">
             </div>
         </form>
         <router-outlet></router-outlet>
