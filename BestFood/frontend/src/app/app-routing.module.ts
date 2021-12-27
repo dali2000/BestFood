@@ -26,6 +26,7 @@ import { UsersComponent } from './admin/users/users.component';
 import { RestoComponent } from './admin/resto/resto.component';
 import { ContasComponent } from './admin/contas/contas.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
+import { FactureComponent } from './client/facture/facture.component';
 
 
 
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'AddFood', component: AddFoodComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'facture', component: FactureComponent },
 
   { path: 'profil', component: ProfilComponent },
   { path: 'updateprofil', component: UpdateProfilComponent },
