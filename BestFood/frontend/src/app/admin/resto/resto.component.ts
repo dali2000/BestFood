@@ -16,7 +16,9 @@ export class RestoComponent implements OnInit {
   }
   data:any;
   restos:any;
-
+  data1:any;
+  public message =""
+  public alert = ""
   getResto(){
     this.http.get("http://localhost:3000/resto/restaurants").subscribe(res =>{
 
@@ -24,6 +26,16 @@ export class RestoComponent implements OnInit {
      this.restos =this.data.restaurants;
      console.log(this.restos);
     })
+  }
+  delete(_id:any){
+    this.http.delete("http://localhost:3000/admin/delResto/"+_id).subscribe(res =>{
+      console.log(res)
+      this.data1 = res
+      this.ngOnInit()
+      this.message = this.data1.msg;
+      this.alert = "alert alert-success"
+    })
+   console.log(_id)
   }
 
 }

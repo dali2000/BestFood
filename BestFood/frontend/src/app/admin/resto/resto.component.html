@@ -2,7 +2,10 @@
 <div class="container">
     <div class="bloc">
         <p class="p">Restouran<span style="color: rgb(247, 97, 10);">ts</span></p>
-
+        <br>
+        <div class="{{alert}}" [hidden]=!message>
+            {{message}}
+        </div>
         <table class="table">
             <thead>
                 <button type="submit" class="btn btn-success">add</button>
@@ -28,7 +31,7 @@
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
 
-                            <button type="submit" class="btn btn-warning">delete</button>
+                            <button type="submit" class="btn btn-warning" (click)="delete(resto._id)">delete</button>
 
                         </div>
                     </td>
