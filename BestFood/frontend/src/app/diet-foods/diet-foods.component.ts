@@ -61,10 +61,10 @@ export class DietFoodsComponent implements OnInit {
   }
   mins(food:any) {
 
-    if(food.quantity<=0){
+    if(food.quantity<=1){
       food.quantity =1
     }
-    food.quantity--
+    else{food.quantity--}
 
 
   }

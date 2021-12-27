@@ -22,6 +22,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
    
   }
+
+  public message =""
+  public alert = ""
+
+  
   public form = {
     email:null,
     password:null
@@ -45,15 +50,20 @@ export class LoginComponent implements OnInit {
         //console.log(this.user);
 
         //redirect after login
-        if(this.token !=null){
-           this.router.navigate(['/Menu/allProductes'])
-         }
-         else{
-          this.router.navigate((['/login']))
-
-         }
+        
     }
+   
   );
+  if(this.token !=null){
+    this.router.navigate(['/Menu/allProductes'])
+  }
+  else{
+  
+     this.message ="plz check you information"
+     this.alert="alert alert-danger"
+   
+
+  }
 
   //console.log(this.token)
 
