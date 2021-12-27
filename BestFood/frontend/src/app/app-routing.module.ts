@@ -25,6 +25,7 @@ import { ProfilAdminComponent } from './admin/profil-admin/profil-admin.componen
 import { UsersComponent } from './admin/users/users.component';
 import { RestoComponent } from './admin/resto/resto.component';
 import { ContasComponent } from './admin/contas/contas.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { FactureComponent } from './client/facture/facture.component';
 
 
@@ -67,7 +68,9 @@ const routes: Routes = [
   {path:'admin/profil',component:ProfilAdminComponent},
   {path:'admin/users',component:UsersComponent},
   {path:'admin/resto',component:RestoComponent},
-  {path:'admin/contacts',component:ContasComponent}
+  {path:'admin/contacts',component:ContasComponent},
+  { path: 'admin/users/updateUser/:_id', component: UpdateUserComponent }
+
 
 
 

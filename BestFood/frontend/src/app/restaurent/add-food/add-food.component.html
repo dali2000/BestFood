@@ -9,22 +9,22 @@
             <p>Na<span style="color: rgb(247, 97, 10);">me:</span> </p>
             <div class="form-group">
                 <input type="text" name="lastName" id="name" class="form-control" placeholder="Food name"
-                    [(ngModel)]="food.name" ngModel>
+                    [(ngModel)]="food.name" required>
             </div>
             <p>Pri<span style="color: rgb(247, 97, 10);">ce:</span></p>
             <div class="form-group">
                 <input type="text" name="firsName" id="price" class="form-control" placeholder="Food price" value=""
-                    [(ngModel)]="food.price">
+                    [(ngModel)]="food.price" required>
             </div>
             <p>img<span style="color: rgb(247, 97, 10);">:</span></p>
             <div class="form-group">
                 <input type="text" name="phone" id="name" class="form-control" placeholder="Food Image" value=""
-                    [(ngModel)]="food.img">
+                    [(ngModel)]="food.img" required>
             </div>
             <p>Cate<span style="color: rgb(247, 97, 10);">gory:</span> </p>
             <div class="form-group">
                 <select name="category" [(ngModel)]="food.category" class="form-select"
-                    aria-label="Default select example">
+                    aria-label="Default select example" required>
                     <option selected>Choose a food category</option>
                     <option value="diet">diet</option>
                     <option value="desert">desert</option>

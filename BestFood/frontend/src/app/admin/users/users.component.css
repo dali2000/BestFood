@@ -1,7 +1,7 @@
 .bloc {
   background-color: white;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.123);
-  width: 60vw;
+  width: auto;
   padding: 2vw;
   border-radius: 5px;
   margin-left: auto;
