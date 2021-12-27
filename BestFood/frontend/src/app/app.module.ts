@@ -35,6 +35,7 @@ import { HommeComponent } from './admin/homme/homme.component';
 import { ProfilAdminComponent } from './admin/profil-admin/profil-admin.component';
 import { RestoComponent } from './admin/resto/resto.component';
 import { UsersComponent } from './admin/users/users.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
 
 
 
@@ -76,6 +77,7 @@ import { UsersComponent } from './admin/users/users.component';
     ProfilAdminComponent,
     RestoComponent,
     UsersComponent,
+    UpdateUserComponent,
 
 
 
