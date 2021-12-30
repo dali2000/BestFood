@@ -58,7 +58,7 @@ class _RecipeCardState extends State<RecipeCard> {
         child: InkWell(
           splashColor: Colors.deepOrange,
           onTap: () {
-            debugPrint(widget.id +"/ qte ${_quantity}" );
+            //debugPrint(widget.id +"/ qte ${_quantity}" );
           },
           child:  SizedBox(
 
@@ -69,14 +69,18 @@ class _RecipeCardState extends State<RecipeCard> {
              crossAxisAlignment: CrossAxisAlignment.center,
              children:<Widget> [
 
-                Image.network(widget.img,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child:Image.network(widget.img,
                   height: 100,
-                  width: 100,
+                  width: 120,
                   alignment: Alignment.topCenter
                   ,fit: BoxFit.cover,
                   errorBuilder: (context, exception, stackTrack) => Icon(Icons.not_interested_outlined,size: 70,),
 
-                ),
+                ),),
+
+
 
 
                 Column(
@@ -87,10 +91,15 @@ class _RecipeCardState extends State<RecipeCard> {
                    })
                    , icon:Icon( Icons.expand_less_outlined)),
                     Container(
-                
+                      decoration: ShapeDecoration(
+                        color:Color.fromRGBO(212, 212, 212, 1.0),
+                        shape: RoundedRectangleBorder (
+                            borderRadius: BorderRadius.circular(32.0),
+                        )
+                        ),
                       width: 20,
                       height: 40,
-                      color: Color.fromRGBO(212, 212, 212, 1.0),
+                      //color: Color.fromRGBO(212, 212, 212, 1.0),
                       child:Center(
 
                           child:Text("${_quantity}",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
