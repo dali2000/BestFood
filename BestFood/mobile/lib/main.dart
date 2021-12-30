@@ -4,6 +4,7 @@ import 'package:mobile/login_page.dart';
 import 'package:mobile/register_page.dart';
 
 void main() {
+
   runApp(const MyApp());
 }
 
@@ -22,3 +23,4 @@ class MyApp extends StatelessWidget {
     ) ;
   }
 }
+

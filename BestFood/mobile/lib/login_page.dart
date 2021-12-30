@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -24,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   String msg="";
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     Map body = {"email": email, "password": password};
+    print(body);
     var jsonResponse;
     var res = await http.post(url, body: body);
     print("${res}");
@@ -38,9 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         _isLoading == false;
       });
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text("${res.statusCode}"),
-      ));
+
     }
     else {
       setState(() {
@@ -57,9 +55,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>HomePage()));
 
     }
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text("${res.statusCode}"),
-    ));
+
     print("${res.body}");
   }
     @override
@@ -123,6 +119,8 @@ class _LoginPageState extends State<LoginPage> {
                       .of(context)
                       .size
                       .width,
+                  child:
+                  Padding(padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: RaisedButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
@@ -131,13 +129,15 @@ class _LoginPageState extends State<LoginPage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 25)),
                     onPressed: _email.text==""||_password.text==""?null
-                    : (){
+                        : (){
                       setState(() {
                         _isLoading=true;
                       });
                       signin(_email.text, _password.text);
                     },
                   ),
+                  )
+
                 ),
                 SizedBox(
                   child: Row(
