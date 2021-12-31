@@ -13,7 +13,7 @@ class RecipeCard extends StatefulWidget {
   _RecipeCardState createState() => _RecipeCardState();
 }
 class _RecipeCardState extends State<RecipeCard> {
-  String url="http://192.168.1.6:3000/cart/cart";
+  String url="http://192.168.1.7:3000/cart/cart";
    int _quantity=1;
    addToCart()async{
      try{
@@ -100,7 +100,9 @@ class _RecipeCardState extends State<RecipeCard> {
                       width: 20,
                       height: 40,
                       //color: Color.fromRGBO(212, 212, 212, 1.0),
-                      child:Center(
+                      child:
+
+                      Center(
 
                           child:Text("${_quantity}",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
                       ) ,
@@ -123,7 +125,7 @@ class _RecipeCardState extends State<RecipeCard> {
                    width: 170,
                    height: 120,
                    child:
-                       Flexible(
+                       Expanded(
                            child: Center(child:Text(
                              widget.name ,
                              maxLines: 3,

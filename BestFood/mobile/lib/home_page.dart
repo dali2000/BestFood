@@ -1,8 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/Menu_page.dart';
+import 'package:mobile/basket_page.dart';
+import 'package:mobile/cart_page.dart';
 import 'package:mobile/custom_animated_bottom_bar.dart';
 import 'package:mobile/login_page.dart';
+import 'package:mobile/profile_page.dart';
 import 'package:mobile/register_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,7 +17,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _inactiveColor = Colors.grey;
-  int _currentIndex = 1;
+  int _currentIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -79,9 +82,10 @@ class _HomePageState extends State<HomePage> {
 
   Widget getBody() {
     List<Widget> pages = [
-      LoginPage(),
+      ProfilePage(),
       MenuPage(),
-      RegisterPage(),
+      BasketPage(),
+      //CartPage(),
     ];
     return IndexedStack(
       index: _currentIndex,
