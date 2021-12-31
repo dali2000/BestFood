@@ -15,6 +15,7 @@ class BasketPage extends StatefulWidget {
 class _BasketPageState extends State<BasketPage> {
   List<Order> orders=[];
   double total=0.0;
+  String orderId="";
   Future getCart() async {
     final String url="http://192.168.1.7:3000/cart/cart";
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
@@ -23,9 +24,9 @@ class _BasketPageState extends State<BasketPage> {
     if(res.statusCode==200){
       var obj = json.decode(res.body);
       var cart=obj['cart'];
-      print('cart');
+      orderId=cart[0]['_id'];
       for(var i = 0; i < cart.length; i++ ){
-        Order order =Order(cart[i]['_id'], cart[i]['order']['_id'], cart[i]['order']['name'], cart[i]['order']['price'], cart[i]['order']['img'],cart[i]['quantity']);
+        Order order =Order(cart[0]['_id'], cart[i]['order']['_id'], cart[i]['order']['name'], cart[i]['order']['price'], cart[i]['order']['img'],cart[i]['quantity']);
 
         orders.add(order);
         total+=cart[i]['quantity'] * double.parse(cart[i]['order']['price']);
@@ -35,7 +36,21 @@ class _BasketPageState extends State<BasketPage> {
       }
     return orders;
     }
+ CancelOrder()async{
+   final String url="http://192.168.1.7:3000/cart/delete";
+   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+   String token = sharedPreferences.getString('token');
+   var res = await http.delete(url,headers:{
+     "_id": orderId,"token":token
+   });
+   if(res.statusCode==200){
+     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+       content: Text("Order Canceled"),
+     ));
+   }
 
+
+ }
 
 
   @override
@@ -107,7 +122,20 @@ class _BasketPageState extends State<BasketPage> {
             height: 50,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10)),),
-
+          FlatButton(
+            onPressed: CancelOrder,
+            child: Text("Cancel Order",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w900,
+                  fontSize: 25
+              ),
+            ),
+            color: Colors.blueGrey,
+            minWidth: 300,
+            height: 50,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10)),),
 
         ],
       ),
