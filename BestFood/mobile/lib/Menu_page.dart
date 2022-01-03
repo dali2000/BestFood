@@ -15,7 +15,7 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   List<Food> foods=[];
   Future getMenu()async{
-    final String url="http://192.168.1.7:3000/food/foods";
+    final String url="http://192.168.1.4:3000/food/foods";
     var res = await http.get(url);
     if(res.statusCode==200){
       var food=[];

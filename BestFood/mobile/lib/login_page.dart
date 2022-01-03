@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController _email= TextEditingController();
   TextEditingController _password= TextEditingController();
   bool _isLoading = false;
-   String url = "http://192.168.1.7:3000/user/login";
+   String url = "http://192.168.1.4:3000/user/login";
 
   signin(String email, String password) async {
   String msg="";

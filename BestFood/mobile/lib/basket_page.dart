@@ -17,7 +17,7 @@ class _BasketPageState extends State<BasketPage> {
   double total=0.0;
   String orderId="";
   Future getCart() async {
-    final String url="http://192.168.1.7:3000/cart/cart";
+    final String url="http://192.168.1.4:3000/cart/cart";
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String token = sharedPreferences.getString('token');
     var res = await http.get(url,headers: {"token":token});
