@@ -13,7 +13,7 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  final String url="http://192.168.1.7:3000/user/profile";
+  final String url="http://192.168.1.4:3000/user/profile";
 String firstName="",lastName="",email='',phone="";
   getUserInfo()async{
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();

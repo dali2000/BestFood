@@ -20,7 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController _phone= TextEditingController();
   TextEditingController _password= TextEditingController();
   bool _isLoading = false;
-   String url = "http://192.168.1.7:3000/user/register";
+   String url = "http://192.168.1.4:3000/user/register";
 
   signup(String email, String password,String firstName, String lastName ,String phone) async {
 

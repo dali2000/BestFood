@@ -13,7 +13,7 @@ class RecipeCard extends StatefulWidget {
   _RecipeCardState createState() => _RecipeCardState();
 }
 class _RecipeCardState extends State<RecipeCard> {
-  String url="http://192.168.1.7:3000/cart/cart";
+  String url="http://192.168.1.4:3000/cart/cart";
    int _quantity=1;
    addToCart()async{
      try{

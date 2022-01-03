@@ -21,7 +21,7 @@ class _CartPageState extends State<CartPage> {
      print(a*b);
      return a*b;
    }
-   String url="http://192.168.1.7:3000/cart/cart";
+   String url="http://192.168.1.4:3000/cart/cart";
 
    deleteOrder() async {
      SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
